@@ -1,0 +1,53 @@
+html 
+{
+  height: 100%;
+  width: 100%;
+}
+body 
+{
+  background-color: ivory;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/* Selektors */
+h1 
+{
+  /* Deklarācijas bloks */
+  font-family: 'Times New Roman', Times, serif; /* Īpašība un vērtība */
+  font-size: 42px;
+}
+p
+{
+  font-size: 24px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.cits /* klase-class, piemēram: p.cits */
+{
+  font-size: 36px;
+  font-family: 'Times New Roman', Times, serif;
+  color: blueviolet;
+}
+
+#tabula /* id */
+{
+  font-size: 22px;
+  font-family: 'Times New Roman', Times, serif;
+  color: #193380; 
+}
+
+table
+{
+  background-color: #7cf3cb; 
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  border-color: darkviolet;
+}
+
+th, td {
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
