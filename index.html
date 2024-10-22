@@ -11,11 +11,12 @@
 <body>
   <header> <h1>Virsrakts</h1> </header>
 <hr>
+  <marquee>Hi!</marquee>
   <main>
     <section id="saturs">
       <p>1. Paragrāfs/rindkopa</p>
       <p class="cits">2. Paragrāfs/rindkopa</p> 
-        <div><img src="media/mana_bilde.png" alt="Bilde" width="50%" border="3"></div><hr><br>
+        <div><img id="bilde" src="media/mana_bilde.png" alt="Bilde" width="50%" border="3"></div><hr><br>
         <nav>
           <a href="https://www.w3schools.com">w3school </a><br><br>
           <a href="par_mums.html" class="cits">Par mums</a><br><br>
@@ -60,8 +61,17 @@
         </table>
         <br>
     </section>
-    
+    <section id="kanva">
+      <canvas id="zimejums" width="500" height="400"></canvas><br>
+        <button onclick="taisnsturis()">Taisnstūris</button>
+        <button onclick="aplis()">Aplis</button>
+        <button onclick="teksts()">Teksts</button>
+        <button onclick="linija()">Līnija</button>
+        <button onclick="bilde()">Bilde</button>
+      <br> 
+    </section>
   </main>
+ 
 <footer>&copy; Mana firma 2024</footer>
     <script src="script.js"></script>
 </body>

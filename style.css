@@ -51,3 +51,19 @@ th, td {
 tr:nth-child(even) {
   background-color: #D6EEEE;
 }
+
+#zimejums
+{
+  background: #D6EEEE;
+  border-width: 5px;
+  border-color: #000000;
+  border-style: solid;
+  align-self: center;
+}
+
+footer {
+  color: #08084f;
+  text-align: right;
+}
+
+
