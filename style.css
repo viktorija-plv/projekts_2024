@@ -2,37 +2,100 @@ html
 {
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Sofia, sans-serif;
+  background: radial-gradient(circle, #ffffff, #dbc2c2);
 }
-body 
+/* body 
 {
   background-color: ivory;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
+} */
 /* Selektors */
+
+.topnav {
+  overflow: hidden;
+  background-color: #c6c3c3;
+  margin-top: 0px;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 200px;
+  /* position: fixed;  */ /* fiksēta pozīcija */ 
+  top: 200px;
+  width: calc(100%-200px);
+  height: 50px;
+}
+
+.topnav a{
+  flex: 1;
+  text-decoration: none; /* Remove default underlining from links */
+  color: white; /* Text color for the links */
+  padding: 14px 20px; /* Add some padding around the links */
+  display: block; /* Ensure each link takes up the full line within the flex container */
+  text-align: center;/* Center the text within each link */
+  font-size: 18px;
+}
+
+.sidebar {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #a39f9f;
+  text-justify: space-around;
+  
+}
+
+.sidebar a {
+  display: block; /* Nodrošina, ka katra saite ir uz atsevišķas līnijas */
+  padding: 10px 20px; /* Pievienojam vertikālu atstarpi ap saitēm */
+  text-decoration: none; /* Noņemam noklusēto teksta apakšsvītru */
+  color: #440d96; /* Teksta krāsa saitēm */
+}
+
+.sidebar a:hover {
+  background-color: #f9dddd; /* Krāsas maiņa, kad pele ir virs saites */
+}
+  
+main {
+    margin-left: 220px; 
+    padding: 10px;
+  margin-top: 25px ;
+  margin-bottom: 50px;
+  height: calc(100%-100px)
+  }
 h1 
 {
   /* Deklarācijas bloks */
   font-family: 'Times New Roman', Times, serif; /* Īpašība un vērtība */
   font-size: 42px;
+  margin-left: 200px;
 }
 p
 {
   font-size: 24px;
   font-family: 'Times New Roman', Times, serif;
 }
-
-.cits /* klase-class, piemēram: p.cits */
+/* klase-class, piemēram: p.cits */
+/*.cits 
 {
   font-size: 36px;
   font-family: 'Times New Roman', Times, serif;
   color: blueviolet;
-}
+}*/
 
 #tabula /* id */
 {
   font-size: 22px;
   font-family: 'Times New Roman', Times, serif;
   color: #193380; 
+  padding: 20px;
+  background-color: #d6cdcd;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 table
@@ -52,6 +115,19 @@ tr:nth-child(even) {
   background-color: #D6EEEE;
 }
 
+#kanva {
+  font-size: 22px;
+  font-family: 'Times New Roman', Times, serif;
+  color: #193380; 
+  padding: 20px;
+  background-color: #d6cdcd;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: calc(100%-200px);
+  width: calc(100%-200px);
+}
+
 #zimejums
 {
   background: #D6EEEE;
@@ -63,7 +139,25 @@ tr:nth-child(even) {
 
 footer {
   color: #08084f;
+  position: fixed;
+  width: calc(100% - 200px); 
+  background-color: #a39f9f; 
+  bottom: 0;
+  left: 200px;
   text-align: right;
+  padding: 5px 10px;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
-
+#saturs {
+  
+  /* Add styles specific to #saturs element here */
+  padding: 20px;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Arial', sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
