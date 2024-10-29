@@ -16,7 +16,7 @@ html
 
 .topnav {
   overflow: hidden;
-  background-color: #c6c3c3;
+  background-color: #333;
   margin-top: 0px;
   display: flex;
   justify-content: space-around;
@@ -27,7 +27,7 @@ html
   height: 50px;
 }
 
-.topnav a{
+.topnav a {
   flex: 1;
   text-decoration: none; /* Remove default underlining from links */
   color: white; /* Text color for the links */
@@ -37,14 +37,25 @@ html
   font-size: 18px;
 }
 
+.topnav a.active {
+  background-color: #121212;
+  color: #ffdd57
+}
+
+.topnav a:hover {
+  background-color: #777;
+  color: #fff
+}
+
 .sidebar {
   height: 100%;
   width: 200px;
   position: fixed;
-  top: 0;
+  top: 0px;
   left: 0;
   background: #a39f9f;
   text-justify: space-around;
+  padding-top: 10px;
   
 }
 
@@ -60,11 +71,16 @@ html
 }
   
 main {
-    margin-left: 220px; 
-    padding: 10px;
-  margin-top: 25px ;
+  margin-left: 220px; 
+  padding: 10px;
+  margin-top: 60px ;
   margin-bottom: 50px;
   height: calc(100%-100px)
+  background-color: #c2c2d1;
+  width: calc(100% - 220px);
+  min-height: calc(100vh - 100px);
+  padding-bottom: 70px; /* Отступ, чтобы футер не перекрывал кнопки */
+  
   }
 h1 
 {
@@ -72,7 +88,9 @@ h1
   font-family: 'Times New Roman', Times, serif; /* Īpašība un vērtība */
   font-size: 42px;
   margin-left: 200px;
+  margin-top: 10px;
 }
+
 p
 {
   font-size: 24px;
@@ -104,11 +122,12 @@ table
   border-collapse: collapse;
   width: 100%;
   text-align: center;
-  border-color: darkviolet;
+  border: 1px solid darkviolet;
 }
 
 th, td {
-  padding: 8px;
+  padding: 10px;
+  border: 1px solid darkviolet;
 }
 
 tr:nth-child(even) {
@@ -120,12 +139,13 @@ tr:nth-child(even) {
   font-family: 'Times New Roman', Times, serif;
   color: #193380; 
   padding: 20px;
-  background-color: #d6cdcd;
+  background-color: #ffffff
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   height: calc(100%-200px);
   width: calc(100%-200px);
+  margin-bottom: 70px
 }
 
 #zimejums
@@ -137,6 +157,56 @@ tr:nth-child(even) {
   align-self: center;
 }
 
+.button-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+form {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+form input[type="submit"] {
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+form input[type="submit"]:hover {
+  background-color: #555;
+}
+
+
 footer {
   color: #08084f;
   position: fixed;
@@ -146,8 +216,8 @@ footer {
   left: 200px;
   text-align: right;
   padding: 5px 10px;
-  overflow: hidden;
   box-sizing: border-box;
+  z-index: 10;
 }
 
 #saturs {

@@ -4,32 +4,43 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>Kontakti</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  <h1>Kontakti</h1><hr>
-    <main>
-  <p>
-          <form>
-            <label for="vards">Vārds:</label><br>
-            <input type="text" id="vards" name="vards"><br><br>
-            <label for="e_pasts">e-pasts:</label><br>
-            <input type="email" id="e_pasts" name="e_pasts"><br><br>
-            <label for="teksts">Ziņa:</label><br>
-            <textarea rows="4"></textarea><br><br>
-            <input type="submit" value="Iesniegt">
-          </form><hr>
-        <img src="media/kontakti.png" alt="Kontakti" width="30%"><br><hr>
-    <nav><br><br>
-        <a href="index.html">Sākums </a><br>
-         <br>
-        <a href="par_mums.html">Par mums</a><br>
-         <br>
+
+  <header>
+    <h1>Kontakti</h1><hr>
+    <nav class="topnav">
+        <a href="index.html">Sākums</a>
+        <a href="par_mums.html">Par mums</a>
+        <a href="kontakti.html" class="active">Kontakti</a>
     </nav>
-  </p>
+  </header>
+  
+  <aside class="sidebar">
+      <a href="index.html">Sākums</a>
+      <a href="par_mums.html">Par mums</a>
+      <a href="#sazinaties">Sazinieties ar mums</a>
+  </aside>
+
+  <main>
+    <section id="sazinaties">
+            <h2>Sazinieties ar mums</h2>
+            <form>
+                <label for="vards">Vārds:</label><br>
+                <input type="text" id="vards" name="vards"><br><br>
+                <label for="e_pasts">E-pasts:</label><br>
+                <input type="email" id="e_pasts" name="e_pasts"><br><br>
+                <label for="teksts">Ziņa:</label><br>
+                <textarea id="teksts" rows="4"></textarea><br><br>
+                <input type="submit" value="Iesniegt">
+            </form>
+            <img src="media/kontakti.png" alt="Kontakti" width="30%">
+        </section>
     </main>
+ 
 
   <footer>&copy; Mana firma 2024</footer>
   <script src="script.js"></script>
