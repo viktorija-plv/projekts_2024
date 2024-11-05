@@ -51,3 +51,41 @@ function bilde() {
   ctx.strokeStyle = "black";
   ctx.strokeRect(390, 255, 150, 150);
 }
+
+function aprekinat() {
+    var vards = document.getElementById("vards").value;
+    let pirmais = parseFloat(document.getElementById("a").value);
+    let otrais = parseFloat(document.getElementById("b").value);
+    if (vards === "") {
+        alert("Ievadi vārdu!");
+        console.log("Ievadi skaitli");
+        return;
+    }
+
+    if (!vards.match(/^\S[a-zA-Zā-žĀ-Ž\s]*$/)) {
+        alert("Ievadi vārdu ar burtiem!");
+        console.log("Ievadi vārdu ar burtiem!");
+        return;
+    }
+  
+    if (isNaN(pirmais) || isNaN(otrais)) {
+        alert("Ievadi skaitļi!");
+        console.log("Ievadi skaitli");
+        return;
+    }
+    let sum = pirmais + otrais;
+    console.log("Rezultats ir " + sum);
+    document.getElementById("rezultats").innerHTML = "Tevi sauc " + vards + ".<br>Rezultāts ir: " + sum;
+}
+function updateContent(newContent) {
+    document.getElementById('main-content').innerHTML = newContent;
+}
+
+// Example usage for dynamic menu interaction
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        const contentId = this.getAttribute('href').substring(1);
+        updateContent(document.getElementById(contentId).innerHTML);
+    });
+});

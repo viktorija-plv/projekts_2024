@@ -4,14 +4,14 @@ html
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family: Sofia, sans-serif;
+  font-family: 'Sofia', sans-serif !important;
   background: radial-gradient(circle, #ffffff, #dbc2c2);
 }
-/* body 
+body 
 {
   background-color: ivory;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-} */
+  font-family: 'Sofia', sans-serif !important;
+} 
 /* Selektors */
 
 .topnav {
@@ -75,7 +75,7 @@ main {
   padding: 10px;
   margin-top: 60px ;
   margin-bottom: 50px;
-  height: calc(100%-100px)
+  height: calc(100%-100px);
   background-color: #c2c2d1;
   width: calc(100% - 220px);
   min-height: calc(100vh - 100px);
@@ -139,7 +139,7 @@ tr:nth-child(even) {
   font-family: 'Times New Roman', Times, serif;
   color: #193380; 
   padding: 20px;
-  background-color: #ffffff
+  background-color: #ffffff;
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -230,4 +230,56 @@ footer {
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#kalkulators {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}
+
+#kalkulators label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+#kalkulators input[type="text"],
+#kalkulators input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#kalkulators button {
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+#kalkulators button:hover {
+  background-color: #555;
+}
+
+#rezultats {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #333;
+}
+
+#bootstrap-example {
+  width: calc(100%-200px);
 }
