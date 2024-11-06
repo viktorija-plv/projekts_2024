@@ -77,15 +77,33 @@ function aprekinat() {
     console.log("Rezultats ir " + sum);
     document.getElementById("rezultats").innerHTML = "Tevi sauc " + vards + ".<br>Rezultāts ir: " + sum;
 }
+
+// dinamiska menju izvelne. updateContent: funkcija aizstāj elementa saturu ar ID galveno saturu ar tam nodoto newContent vērtību.
 function updateContent(newContent) {
     document.getElementById('main-content').innerHTML = newContent;
 }
 
-// Example usage for dynamic menu interaction
+// piemers
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', function(event) {
         event.preventDefault();
-        const contentId = this.getAttribute('href').substring(1);
+        const contentId = this.getAttribute('href').substring(1); // kontenta id
         updateContent(document.getElementById(contentId).innerHTML);
+    });
+});
+
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        const url = this.getAttribute('href');
+        fetch(url)
+            .then(response => response.text())
+            .then(data => {
+                const mainContent = document.getElementById('main-content');
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(data, 'text/html');
+                const newContent = doc.querySelector('main').innerHTML;
+                mainContent.innerHTML = newContent;
+            });
     });
 });
